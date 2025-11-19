@@ -32,11 +32,13 @@ def subtract(a, b):
 def mul(a,b):
     return a*b
 def div(a,b):
-    try:
-       return b/a
-    except ZeroDivisionError:
-        print("error")
+    return b/a
 
+def log(a,b):
+    if a <= 0:
+        raise ValueError("error")
+    return math.log(a,b)
+    
 def logarithm(a, b):
     try:
         math.log(b,a)# use math library/raise ValueError
@@ -45,10 +47,12 @@ def logarithm(a, b):
 
 
 def exp(a,b):
-    return a^b
+    return a**b
+def multiply(a, b):
+    a * b
 
-
-
+def exponent(a, b):
+    a**b
 
 
 
