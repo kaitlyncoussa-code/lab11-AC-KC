@@ -1,4 +1,5 @@
 from calculator import *
+import unittest
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
