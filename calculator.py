@@ -7,6 +7,18 @@ One function per operation, in order.
 # First example
 import math
 
+def square_root(a):
+    try:
+        math.sqrt(a)
+    except Exception as e:
+        print("Whoopsies! Please try a valid input")
+def hypotenuse(a, b):
+    try:
+        math.hypot(a, b)
+    except Exception as e:
+        print("Whoopsies! Please try a valid input")
+
+
 def add(a, b):
     a + b
 
