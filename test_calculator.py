@@ -98,7 +98,10 @@ class TestCalculator(unittest.TestCase):
             logarithm(0, 5)
             logarithm(6,0)
             logarithm(9999, 0)
-
+        with self.assertRaises(TypeError):
+            logarithm(0, 5)
+            logarithm(6,0)
+            logarithm(9999, 0)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(5, hypotenuse(3,4))

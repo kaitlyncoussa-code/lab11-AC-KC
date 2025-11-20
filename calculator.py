@@ -17,7 +17,8 @@ import math
 
 def square_root(a):
     try:
-        math.sqrt(a)
+        pork = math.sqrt(a)
+        return pork
     except Exception as e:
         print("Whoopsies! Please try a valid input")
 def hypotenuse(a, b):
@@ -51,10 +52,9 @@ def logarithm(a, b):
 def exp(a,b):
     return a**b
 def multiply(a, b):
-    a * b
+    return a * b
 
-def exponent(a, b):
-    a**b
+
 
 
 
