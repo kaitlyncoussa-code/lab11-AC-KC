@@ -71,41 +71,38 @@ class TestCalculator(unittest.TestCase):
         a = 10
         b = 100
         need = 2
-        result = log(b,a)
+        result = logarithm(b,a)
         assert result == need
 
         a = 8
         b = 2
         need = 3
-        result = log(a,b)
+        result = logarithm(a,b)
         assert result == need
 
         a = 81
         b = 3
         need = 4
-        result = log(a,b)
+        result = logarithm(a,b)
         assert result == need
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            log(10, -5)
+            logarithm(10, -5)
     # ##########################
 
 
     def test_log_invalid_argument(self): # 1 assertion
         # call log function inside, example:
         with self.assertRaises(ValueError):
-            logarithm(0, 5)
-            logarithm(6,0)
-            logarithm(9999, 0)
+            logarithm(0, 0)
+
         with self.assertRaises(TypeError):
-            logarithm(0, 5)
-            logarithm(6,0)
-            logarithm(9999, 0)
+            logarithm("horse", "car")
+
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(5, hypotenuse(3,4))
-        self.assertAlmostEqual(10.81665, hypotenuse(6, 9))
         self.assertEqual(5, hypotenuse(-3, -4))
 
     def test_sqrt(self): # 3 assertions

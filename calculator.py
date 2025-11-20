@@ -17,13 +17,14 @@ import math
 
 def square_root(a):
     try:
-        pork = math.sqrt(a)
-        return pork
+        math.sqrt(a)
+
     except Exception as e:
         print("Whoopsies! Please try a valid input")
 def hypotenuse(a, b):
     try:
-        math.hypot(a, b)
+        pork = math.hypot(a, b)
+        return pork
     except Exception as e:
         print("Whoopsies! Please try a valid input")
 
@@ -37,16 +38,18 @@ def mul(a,b):
 def div(a,b):
     return b/a
 
-def log(a,b):
+def logarithm(a,b):
     if a <= 0:
         raise ValueError("error")
+    if not isinstance(a, int):
+        raise TypeError("Whoopsiedoodle!")
     return math.log(a,b)
     
-def logarithm(a, b):
-    try:
-        math.log(b,a)# use math library/raise ValueError
-    except ValueError:
-        print("Whoopsies! Please try a valid input")
+# def logarithm(a, b):
+#     try:
+#         math.log(b,a)# use math library/raise ValueError
+#     except ValueError:
+#         print("Whoopsies! Please try a valid input")
 
 
 def exp(a,b):
