@@ -1,3 +1,7 @@
+# https://github.com/kaitlyncoussa-code/lab11-AC-KC.git
+# Partner 1: Angelina Coutsoukes
+# Partner2: Kaitlyn Coussa
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -5,9 +9,7 @@ calculator.py
 One function per operation, in order.
 """
 """ 
-https://github.com/kaitlyncoussa-code/lab11-AC-KC.git
-Partner 1: Angelina Coutsoukes
-Partner2: Kaitlyn Coussa
+
 
 """
 # First example
