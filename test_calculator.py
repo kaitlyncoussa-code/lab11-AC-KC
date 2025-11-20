@@ -2,7 +2,7 @@ from calculator import *
 import unittest
 
 class TestCalculator(unittest.TestCase):
-       def test_add(self): # 3 assertions
+    def test_add(self): # 3 assertions
         a = 1
         b = 2
         need = 3
@@ -20,30 +20,33 @@ class TestCalculator(unittest.TestCase):
         need=16
         result = add(a,b)
         assert result == need
+
     def test_subtract(self): # 3 assertions
         a = 16
         b = 8
         need = 8
-        result = sub(a,b)
+        result = subtract(a,b)
         assert result == need
 
         a=7
         b=7
         need = 0
-        result = sub(a,b)
+        result = subtract(a,b)
         assert result == need
 
         a=10
         b=5
         need = 5
-        result = sub(a,b)
+        result = subtract(a,b)
         assert result == need
-    ####### Partner 1
+
+
     def test_multiply(self): # 3 assertions
         self.assertEqual(4 *25 , mul(4, 25))
         self.assertEqual(-30 * 5, mul(-30, 5))
         self.assertEqual(0 * 5, mul(0, 5))
         self.assertEqual(123456789 * 123456789, mul(123456789, 123456789))
+
     def test_divide(self): # 3 assertions
         self.assertEqual(25/5, div(5,25))
         self.assertEqual(-30 / 6, div(6, -30))
@@ -83,20 +86,21 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             log(10, -5)
     # ##########################
-    
-    ####### Partner 1
+
+
     def test_log_invalid_argument(self): # 1 assertion
         # call log function inside, example:
         with self.assertRaises(ValueError):
             logarithm(0, 5)
             logarithm(6,0)
             logarithm(9999, 0)
-#test
+
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(5, hypotenuse(3,4))
         self.assertAlmostEqual(10.81665, hypotenuse(6, 9))
         self.assertEqual(5, hypotenuse(-3, -4))
+
     def test_sqrt(self): # 3 assertions
         # Test for invalid argument, example:
         with self.assertRaises(TypeError):
