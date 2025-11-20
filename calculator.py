@@ -21,6 +21,7 @@ def square_root(a):
 
     except Exception as e:
         print("Whoopsies! Please try a valid input")
+        raise
 def hypotenuse(a, b):
     try:
         pork = math.hypot(a, b)
