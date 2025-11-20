@@ -2,14 +2,42 @@ from calculator import *
 import unittest
 
 class TestCalculator(unittest.TestCase):
-    ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
+       def test_add(self): # 3 assertions
+        a = 1
+        b = 2
+        need = 3
+        result = add(a,b)
+        assert result == need
 
-    # def test_subtract(self): # 3 assertions
-    #     fill in code
-    # ##########################
+        a = 14
+        b = 4
+        need = 18
+        result = add(a,b)
+        assert result == need
 
+        a=8
+        b=8
+        need=16
+        result = add(a,b)
+        assert result == need
+    def test_subtract(self): # 3 assertions
+        a = 16
+        b = 8
+        need = 8
+        result = sub(a,b)
+        assert result == need
+
+        a=7
+        b=7
+        need = 0
+        result = sub(a,b)
+        assert result == need
+
+        a=10
+        b=5
+        need = 5
+        result = sub(a,b)
+        assert result == need
     ####### Partner 1
     def test_multiply(self): # 3 assertions
         self.assertEqual(4 *25 , mul(4, 25))
@@ -24,18 +52,36 @@ class TestCalculator(unittest.TestCase):
             self.assertEqual(25 / 0, div(0, 25))
 
     ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
+       def test_divide_by_zero(self): # 1 assertion
+        with self.assertRaises(ZeroDivisionError):
+            div(0,5)
     #     # call division function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     div(0, 5)
     #     fill in code
 
-    # def test_logarithm(self): # 3 assertions
-    #     fill in code
+    def test_logarithm(self): # 3 assertions
+        a = 10
+        b = 100
+        need = 2
+        result = log(b,a)
+        assert result == need
 
-    # def test_log_invalid_base(self): # 1 assertion
-    #     # use same technique from test_divide_by_zero
-    #     fill in code
+        a = 8
+        b = 2
+        need = 3
+        result = log(a,b)
+        assert result == need
+
+        a = 81
+        b = 3
+        need = 4
+        result = log(a,b)
+        assert result == need
+
+    def test_log_invalid_base(self): # 1 assertion
+        with self.assertRaises(ValueError):
+            log(10, -5)
     # ##########################
     
     ####### Partner 1
