@@ -58,8 +58,8 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):
             self.assertEqual(25 / 0, div(0, 25))
 
-    ######## Partner 2
-       def test_divide_by_zero(self): # 1 assertion
+
+    def test_divide_by_zero(self): # 1 assertion
         with self.assertRaises(ZeroDivisionError):
             div(0,5)
     #     # call division function inside, example:
